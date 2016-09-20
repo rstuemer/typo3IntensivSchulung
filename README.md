@@ -27,4 +27,33 @@
 
 ## Extensions 
 	- Typo3Console -> Wartung im Terminal
+	
+	
+	
+## Wichtig 
+	- Warning Emailaddress eingeben / Warningmode einstellen
+	-letsencrypt.org -> Kostenlose Certificate
+	-cHashExcludedParameters eintragen für Faccebook etc.
+## Einstellungen 
+###GFX 
+			-im_noScaleUP =1
+			-Formate einschränken ? 
+			- jpg_quality   =80 
+			- use gdlib_png = 1
+###http
 
+
+
+
+##Notizen
+	Einbau Slider im Header als Extension im Contentbereich oder als MediaProcessor
+	https://docs.typo3.org/typo3cms/extensions/fluid_styled_content/latest/AddingYourOwnContentElements/Index.html
+	http://www.typo3-formhandler.com/formhandler/
+	Suche mit #page: etc. möglich
+	
+	
+## Page Cache Configurieren 
+https://docs.typo3.org/typo3cms/TSconfigReference/PageTsconfig/TCEmain/Index.html?highlight=tcemain
+
+
+Page-TSConfig  add -> TCEMAIN.clearCacheCmd = cacheTag:pagetag1

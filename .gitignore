@@ -19,5 +19,5 @@
 # Ignore temp directory.
 /typo3temp/
 /.idea/
-/typo3conf/ext/ot_bootstrap3/
+
 /typo3conf/LocalConfiguration.php
