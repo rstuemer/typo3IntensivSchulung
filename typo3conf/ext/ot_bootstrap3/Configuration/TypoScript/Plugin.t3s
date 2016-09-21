@@ -1,0 +1,7 @@
+plugin{
+	tx_felogin_pi1{
+
+		#Löschen
+		_CSS_DEFAULT_STYLE >
+	}
+}

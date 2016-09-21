@@ -1,0 +1,12 @@
+config{
+	language=de
+	locale_all = de_DE.utf8
+	sys_language_uid = 0
+	htmlTag_langKey=de
+
+
+	concatenateCss=1
+	concatenateJs=1
+	compressJs =1
+	compressCss = 1
+}

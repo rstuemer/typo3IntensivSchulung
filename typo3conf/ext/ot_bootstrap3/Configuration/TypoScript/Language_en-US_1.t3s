@@ -1,0 +1,12 @@
+#Spracheinstellung wenn Sprache in Get or Post vars = 1
+
+[globalVar = GP:L=1]
+	config{
+		language=en
+		locale_all = en_US.utf8
+		sys_language_uid = 1
+		htmlTag_langKey=en
+		linkVars = L(int)
+	}
+
+[global]

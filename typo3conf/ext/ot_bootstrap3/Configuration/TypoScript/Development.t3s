@@ -1,0 +1,5 @@
+config{
+	debug = 1
+	#deactiviert die Ops es ist ein Fehler passiert ausgabe
+	contentObjectExceptionHandler = 0
+}
