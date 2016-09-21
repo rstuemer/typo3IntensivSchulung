@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns:t3="http://typo3.org/schemas/xliff" version="1.0">
+	<file datatype="plaintext" date="2016-9-21T20:22:32Z" original="messages" product-name="ot_bootstrap3" source-language="en" target-language="de" >
+		<header/>
+		<body>
+
+			<trans-unit id="pageCreated">
+				<source>page created: %1s at %2s . </source>
+				<target>Diese Seite wurde am %1s um %2s  Uhr erstellt.</target>
+			</trans-unit>
+			<trans-unit id="format_date">
+				<source>Y/d/m</source>
+				<target>d.m.Y</target>
+			</trans-unit>
+			<trans-unit id="format_time">
+				<source>h:i:s A</source>
+				<target>H:i:s</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

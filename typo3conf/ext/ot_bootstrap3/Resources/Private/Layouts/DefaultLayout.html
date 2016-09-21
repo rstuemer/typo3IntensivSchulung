@@ -41,6 +41,59 @@
 		</div>
 	</nav>
 <f:render section="Content" />
+
+	<!--footer.page-footer>div.container>.row>.col-sm-3*4>strong.h2-footer{Header}^p>lorem40-->
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3"><strong class="h2-footer">Header</strong>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam asperiores assumenda
+					consequatur corporis distinctio doloremque fuga iste itaque iure labore, nam nostrum obcaecati
+					placeat quae quidem rem suscipit, veniam? Aspernatur blanditiis, ducimus eveniet laborum perferendis
+					recusandae sed similique velit.</p></div>
+				<div class="col-sm-3"><strong class="h2-footer">Header</strong>
+				<p>Adipisci amet delectus dolor dolore eos eum facilis hic impedit incidunt inventore maiores nesciunt
+					nisi non omnis optio, quam, qui quisquam quo quos sapiente sit tempora ut vel vero, voluptate.
+					Asperiores doloremque ducimus expedita ipsum minima tenetur? Ad, facere in.</p></div>
+				<div class="col-sm-3"><strong class="h2-footer">Header</strong>
+				<p>Aperiam, eveniet, libero. Optio, sequi, suscipit. Alias aliquam beatae corporis culpa dolor eaque
+					earum ipsam labore mollitia natus nisi officia, perferendis quae quasi quia quisquam quo recusandae
+					sequi sint sunt tenetur totam ut vitae? Corporis culpa cum esse minus voluptate.</p></div>
+				<div class="col-sm-3"><strong class="h2-footer">Header</strong>
+				<p>Aliquam autem dolore et minima molestias nisi nulla placeat quasi quibusdam repellendus? Accusamus
+					amet assumenda atque, dicta eligendi error esse est ex facere illo, incidunt ipsam iusto maxime modi
+					nihil officiis, possimus quas quis quo repudiandae saepe sequi suscipit tempora.</p></div>
+			</div>
+			<div class="row"> <i class="fa fa-copyright" aria-hidden="true"></i>
+				Copyright 2015-<f:format.date format="Y" date="now"/>	{settings.companyName}</div>
+
+			<!--<f:format.date format="d.m.Y H:i:s" date="{data.crdate}"/>-->
+			<f:translate key="pageCreated" extensionName="ot_bootstrap3" arguments="{
+			0: '{data.crdate -> f:format.date(
+			format: \'{f:translate(
+				id: \\\'format_date\\\',
+				extensionName: \\\'ot_bootstrap3\\\'
+			)}\'
+			)}',
+			1:'{data.crdate -> f:format.date(
+				format: \'{f:translate(
+					id: \\\'format_time\\\',
+					extensionName: \\\'ot_bootstrap3\\\'
+				)}\'
+			)}'
+			}"/>
+			<br/>
+			<!--{f.translate(id:'pageCreated', extensionName='ot_bootstrap3', arguments=\"{0:'date' , 1:'time'}\" )}-->
+			{f:translate(id:'formate_date', extensionName:'ot_bootstrap3')}
+			{f:translate(id:'formate_time', extensionName:'ot_bootstrap3')}
+
+
+			<!--{data.crdate -> f:format.date(format: 'd.m.Y H:i:s')}-->
+
+
+
+		</div>
+	</footer>
 </f:spaceless>
 </html>
 
