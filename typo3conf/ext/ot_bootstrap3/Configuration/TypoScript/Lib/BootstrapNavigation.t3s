@@ -33,6 +33,13 @@ lib.navigation{
 			CURIFSUB < .IFSUB
 			CURIFSUB.wrapItemAndSub = <li class="dropdown active">|</li>
 			ACTIFSUB < .CURIFSUB
+			SPC = 1
+			SPC{
+				linkWrap = </ul><ul class="nav navbar-nav navbar-right">
+				#LinkText nicht mit Ausgeben (Menü Rechts)
+				stdWrap.cObject = TEXT
+				stdWrap.cObject.value =
+			}
 
 		}
 
@@ -46,6 +53,11 @@ lib.navigation{
 				wrapItemAndSub = <li>|</li>
 			}
 			CUR < lib.navigation.20.1.CUR
+			SPC < .NO
+			SPC{
+				wrapItemAndSub = <li role="seperator" class="divider"></li><li class="dropdown-header">|</li>
+				doNotLinkIt = 1
+			}
 
 		}
 	}

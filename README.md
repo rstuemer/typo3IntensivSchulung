@@ -34,6 +34,8 @@
 	- Warning Emailaddress eingeben / Warningmode einstellen
 	-letsencrypt.org -> Kostenlose Certificate
 	-cHashExcludedParameters eintragen für Faccebook etc.
+	
+	-https://einfach-fuer-alle.de/
 ## Einstellungen 
 ###GFX 
 			-im_noScaleUP =1
