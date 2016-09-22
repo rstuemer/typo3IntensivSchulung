@@ -38,7 +38,10 @@
 				<f:for each="{files}" as="file">
 
 					<div>
-						<img data-lazy="{f:uri.image(src:'{file.originalFile.publicURL}')}"/>
+						<img data-lazy="{f:uri.image(src:'{file.originalFile.publicURL}')}" alt="{file.properties.alternative}" />
+						<f:if condition="{file.properties.description}">
+							<figcaption>{file.properties.description}</figcaption>
+						</f:if>
 					</div>
 
 				</f:for>
