@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://xsd.oliver-thiele.de/ns/typo3/cms-fluid/7.6/ViewHelpers">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,6 +30,25 @@
 
 <!-- Fixed navbar -->
 <f:section name="Content">
+
+
+	<f:if condition="{files -> f:count()} > 0">
+		<f:then>
+			<div class="slickslider">
+				<f:for each="{files}" as="file">
+
+					<div>
+						<img data-lazy="{f:uri.image(src:'{file.originalFile.publicURL}')}"/>
+					</div>
+
+				</f:for>
+			</div>
+		</f:then>
+		<f:else>
+			Image
+		</f:else>
+	</f:if>
+
 	<div class="row">
 		{content_0->f:format.raw()}
 	</div>

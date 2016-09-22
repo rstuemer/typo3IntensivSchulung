@@ -15,9 +15,25 @@ page {
 			#Nicht bei Css integriert
 			#integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u
 		}
+
+		slick = https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css
+		slick {
+			external = 1
+			disableCompression=1
+			excludeFromConcatenation=1
+		}
+		slicktheme = http://kenwheeler.github.io/slick/slick/slick-theme.css
+		slicktheme {
+			external = 1
+			disableCompression=1
+			excludeFromConcatenation=1
+		}
+
 	}
 
-	includeCSS {
+
+
+includeCSS {
 		myStyles = typo3conf/ext/ot_bootstrap3/Resources/Public/Css/MyStyles.css
 	}
 
@@ -33,7 +49,6 @@ page {
 
 		includeJsFooterLibs {
 			#bootstrap =https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
-
 			#bootstrap{
 			#external=1
 			#Nicht bei Css integriert
@@ -41,14 +56,56 @@ page {
 		}
 	}
 
-	includeJsFooter {
+	includeJSFooter {
+		myscripts = typo3conf/ext/ot_bootstrap3/Resources/Public/js/myscripts.js
 
 	}
 
+	bodyTagCObject = COA
+	bodyTagCObject{
+		10 = TEXT
+		10.value = <body id="page-{TSFE:id}" class="
+		# Damit TSFE:id aufbelöst wird
+		10.stdWrap.insertData = 1
+		20 < lib.templateName
+		20.stdWrap {
+			case = lower
+			wrap = be-layout-|
+		}
+		30  = CASE
+		30 {
+			key.data = TSFE:page|layout
+			0=TEXT
+			0.value = white
+			1  =TEXT
+			1.value = black
+			default < .0
+			stdWrap.noTrimWrap = | layout-||
+		}
+
+		40 = CASE
+		40{
+			key.data = TSFE:sys_language_uid
+			stdWrap{
+				required = 1
+				noTrimWrap = | language-||
+			}
+			default = TEXT
+			default.value = de
+			# in lanugage_xx_XX_x.t3s
+			#1 = TEXT
+			#1.value  = en
+			#db:
+			#2 = TEXT
+			#2.value = en
+		}
+		100 = TEXT
+		100.value = ">
+	}
 
 10 = FLUIDTEMPLATE
 10 {
-	templateName = default
+	templateName < lib.templateName
 
 	layoutRootPaths {
 		10 = typo3conf/ext/ot_bootstrap3/Resources/Private/Layouts
@@ -65,8 +122,38 @@ page {
 		homepageUid = 1
 		companyName= Mustermann AG
 	}
-	variables{
 
+	#Keine *_INT Objekte!!!! Sonst wird Cache deaktiviert für alle
+	variables{
+		content_0 < styles.content.get
+		content_1 < .content_0
+		content_1.select.where = colPos=1
+		content_2 < .content_0
+		content_2.select.where = colPos=2
+		content_3 < .content_0
+		content_3.select.where = colPos=3
+		content_4 < .content_0
+		content_4.select.where = colPos=4
+
+		#Footer
+
+
+		content_6 < .content_0
+		content_6.select.where = colPos=6
+		content_6.select.pidInList=1
+		content_7 < .content_6
+		content_7.select.where = colPos=7
+		content_8 < .content_6
+		content_8.select.where = colPos=8
+		content_9 < .content_6
+		content_9.select.where = colPos=9
+
+	}
+	dataProcessing {
+		10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+		10 {
+			references.fieldName = media
+		}
 	}
 
 }
@@ -77,6 +164,8 @@ page {
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" crossorigin="anonymous"></script>
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" integrity="sha384-ZULtytbCZdmL8PeKalcAKnseGOqrCiPBi3DiB7s4JJmS8gjSbfw0w8SPKpt9WemG" crossorigin="anonymous"></script>
 		)
 	}
 }

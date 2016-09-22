@@ -1,0 +1,73 @@
+mod {
+	web_layout{
+		BackendLayouts{
+			Default{
+				title=Default
+				config{
+					backend_layout {
+						colCount = 1
+						rows {
+							1 {
+								columns {
+									1 {
+										name = Inhalt
+										colPos = 0
+									}
+								}
+							}
+
+						}
+					}
+
+				}
+				#icon = EXT:ot_bootstrap3/Resources/Public/Images/BackendLayouts/Default.svg
+			}
+			Homepage{
+				title=Homepage
+				config{
+					backend_layout {
+						colCount = 4
+						rowCount = 2
+						rows {
+							1 {
+								columns {
+									1 {
+										name = Inhalt
+										colspan = 4
+										colPos = 0
+									}
+								}
+							}
+							2 {
+								columns {
+									1 {
+										name = Footer 1
+										colPos = 6
+									}
+									2 {
+										name = Footer 2
+										colPos = 7
+									}
+									3 {
+										name = Footer 3
+										colPos = 8
+									}
+									4 {
+										name = Footer 4
+										colPos = 9
+									}
+								}
+							}
+						}
+					}
+
+				}
+
+				#icon =
+			}
+		}
+	}
+}
+
+
+

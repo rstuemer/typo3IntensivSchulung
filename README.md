@@ -59,3 +59,9 @@ https://docs.typo3.org/typo3cms/TSconfigReference/PageTsconfig/TCEmain/Index.htm
 
 
 Page-TSConfig  add -> TCEMAIN.clearCacheCmd = cacheTag:pagetag1
+
+
+##Install
+Aus der Startseite Root Template anlegen und in Constants and Setup folgende Zeilen hinzufügen: 
+<INCLUDE_TYPOSCRIPT: source="FILE:typo3conf/ext/ot_bootstrap3/Configuration/TypoScript/constants.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:typo3conf/ext/ot_bootstrap3/Configuration/TypoScript/setup.txt">

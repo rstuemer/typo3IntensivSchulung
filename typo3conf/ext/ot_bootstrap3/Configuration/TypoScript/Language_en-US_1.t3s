@@ -8,5 +8,12 @@
 		htmlTag_langKey=en
 		linkVars = L(int)
 	}
-
+	page{
+		bodyTagCObject{
+			40{
+				1=TEXT
+				1.value = en
+			}
+		}
+	}
 [global]

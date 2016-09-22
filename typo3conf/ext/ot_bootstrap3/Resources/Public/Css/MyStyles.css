@@ -17,3 +17,10 @@ body {
 .red{
 	background-color: red;
 }
+
+
+#page-footer{
+	background-color: darkcyan;
+	padding:30px 0px;
+	color:#fff;
+}
